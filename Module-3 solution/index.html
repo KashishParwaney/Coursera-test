@@ -2,58 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
-    /* Custom CSS for the navbar */
-    .nav {
-      white-space: nowrap; /* Prevent wrapping */
-      overflow-x: auto; /* Enable horizontal scrolling */
+    /* Custom CSS for the full-width dropdown menu */
+    .navbar
+    {
+      background-color: black;
     }
-    .navbar-brand {
-      color: #ffffff; /* White color */
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
+    .navbar-collapse.collapse.in {
+      display: block ;
     }
     .navbar-nav {
-      background-color: #f8f9fa; /* Light gray background */
-    }
-    .nav-item {
-      border-bottom: 1px solid #dee2e6;
-      padding: 0;
+      float: none;
       margin: 0;
+      text-align: center;
     }
-    @media (max-width: 767px) {
-      .navbar-nav .nav-item {
-        display: block;
-      }
+    .navbar-default .navbar-nav {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background-color:beige;
+    }
+    .nav-item
+    {
+      border:1px solid black;
+    }
+    .navbar-brand.bg-dark {
+      background-color: black;
+      color: white; /* Optional: Set text color to white */
+    }
+    .menu-text
+    {
+      margin: top 20px;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <nav class="navbar navbar-default">
     <div class="container">
-      <a class="navbar-brand text-center" href="#">Food.LLC</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="myDropdown">
-        <ul class="navbar-nav w-100">
-          <li class="nav-item"><a class="nav-link" href="#">Chicken</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Beef</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sushi</a></li>
-        </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Food, LLC</a>
       </div>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <!-- Mobile view dropdown menu -->
+        <ul class="nav navbar-nav visible-xs">
+              <li class="nav-item"><a href="#">Chicken</a></li>
+              <li class="nav-item"><a href="#">Beef</a></li>
+              <li class="nav-item"><a href="#">Sushi</a></li>
+            </ul>
+        </div>
     </div>
   </nav>
+  <p class="text-center menu-text">Our Menu</p>
 
-  <!-- Optional: Your other content goes here -->
-
-  <!-- Bootstrap JavaScript (jQuery and Popper.js) -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Bootstrap JavaScript (jQuery and Bootstrap JS) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
